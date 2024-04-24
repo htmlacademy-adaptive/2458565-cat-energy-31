@@ -6,16 +6,21 @@
   <title>CAT ENERGY</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico"><!-- 32x32 -->
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png"><!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <a class="page-header__link logo" href="index.html">
-      <img class="logo__image" src="#" width="33" height="38" alt="Логотип Cat Energy">
-    </a>
-    <a class="page-header__link logo" href="index.html">
-      <img class="logo__image" src="#" width="101" height="18" alt="Текстовый логотип Cat Energy">
+      <picture>
+        <source media="(min-width: 1200px)" width="202" height="59" type="image/svg+xml" srcset="images/logotype/logo-desktop.svg">
+        <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="images/logotype/logo-tablet.svg">
+        <img class="logo__image" src="images/logotype/logo-mobile.svg" width="190" height="38" alt="Логотип Cat Energy">
+      </picture>
     </a>
     <nav class="main-navigation">
       <button class="main-navigation__toggle" type="button">
@@ -40,7 +45,12 @@
     <section class="promo">
       <h1 class="promo__title">Функциональное питание для котов</h1>
       <p class="promo__slogan">Занялся собой? Займись котом!</p>
-      <img class="promo__image" src="#" width="280" height="270" alt="Изображение питания Cat Energy для котов со вкусом курицы">
+      <picture>
+        <source media="(min-width: 1200px)" width="552" height="499" type="image/png" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
+        <img class="promo__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Изображение питания Cat Energy для котов со вкусом курицы">
+      </picture>
+      <br>
       <a class="promo__link button" href="#">Подобрать программу</a>
     </section>
     <section class="slim services-section">
@@ -83,8 +93,14 @@
           </div>
         </dl>
         <p class="example__text">Затраты на питание: 15 000 руб.</p>
-        <img class="example__image" src="#" width="280" height="256" alt="Кот Борис, набравший 5 лишних кг">
-        <img class="example__image" src="#" width="280" height="256" alt="Кот Борис, похудевший на 5 кг">
+        <picture>
+          <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/slider/cat-before-tablet-desktop@1x.png 1x, images/slider/cat-before-tablet-desktop@2x.png 2x">
+          <img class="example__image" src="images/slider/cat-before-mobile@1x.png" srcset="images/slider/cat-before-mobile@2x.png" width="280" height="256" alt="Кот Борис, набравший 5 лишних кг">
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/slider/cat-after-tablet-desktop@1x.png 1x, images/slider/cat-after-tablet-desktop@2x.png 2x">
+          <img class="example__image" src="images/slider/cat-after-mobile@1x.png" srcset="images/slider/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис, похудевший на 5 кг">
+        </picture>
       </div>
     </section>
     <section class="contacts">
@@ -98,7 +114,11 @@
             Санкт-Петербург
           </address>
         </div>
-        <img class="contacts__map-image" src="#" width="320" height="362" alt="Местоположение офиса компании Cat Energy">
+        <picture>
+          <source media="(min-width: 1200px)" width="1440" height="400" type="image/png" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
+          <img class="contacts__map-image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Местоположение офиса компании Cat Energy">
+        </picture>
       </div>
     </section>
   </main>
