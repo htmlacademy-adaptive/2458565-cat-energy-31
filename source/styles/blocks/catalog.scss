@@ -1,18 +1,18 @@
-.catalog {
+// .catalog {
 
-}
+// }
 
 .catalog__title {
   @include title-font(36px, 36px, normal);
 }
 
-.catalog__list {
+// .catalog__list {
 
-}
+// }
 
-.catalog__item {
+// .catalog__item {
 
-}
+// }
 
 .catalog__text {
   @include title-font(16px, 20px);
@@ -23,9 +23,9 @@
   line-height: 16px;
 }
 
-.catalog__button {
+// .catalog__button {
 
-}
+// }
 
 .catalog__button--accent {
   color: #444444;
