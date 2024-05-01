@@ -1,0 +1,16 @@
+.stats {
+
+}
+
+.stats__item {
+
+}
+
+.stats__title {
+  @include title-font(24px, 24px);
+}
+
+.stats__description {
+  font-size: 12px;
+  line-height: 12px;
+}

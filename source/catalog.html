@@ -38,9 +38,9 @@
     </nav>
   </header>
   <main class="inner-page-container">
-    <section class="inner-page-container__catalog catalog">
-      <h1 class="inner-page-container__title">Каталог продукции</h1>
-      <ul class="inner-page-container__catalog">
+    <section class="inner-page-container__section catalog">
+      <h1 class="catalog__title">Каталог продукции</h1>
+      <ul class="catalog__list">
         <li class="catalog__item card">
           <picture>
             <source media="(min-width: 1200px)" width="161" height="172" type="image/png" srcset="images/catalog/desktop/cat-energy-chicken-500-desktop@1x.png 1x, images/catalog/desktop/cat-energy-chicken-500-desktop@2x.png 2x">
@@ -160,7 +160,7 @@
       </ul>
       <p class="catalog__text">Показать еще 100500 товаров</p>
       <p class="catalog__legend">На самом деле вкусов гораздо больше!</p>
-      <button class="catalog__button catalog__button--accent" type="button">Показать все</button>
+      <button class="catalog__button catalog__button--accent button" type="button">Показать все</button>
     </section>
     <section class="products">
       <h2 class="products__title">Дополнительные товары</h2>
@@ -192,13 +192,13 @@
       </ul>
       <p class="products__description">Закажите все и получите чехол для кота в подарок!</p>
     </section>
-    <section class="promo">
-      <h2 class="promo__title">Акции и новинки</h2>
-      <p class="promo__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-      <form class="promo__form" action="https://echo.htmlacademy.ru/" method="post">
+    <section class="subscription">
+      <h2 class="subscription__title">Акции и новинки</h2>
+      <p class="subscription__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+      <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="email-field">Введите свой e-mail</label>
         <input type="email" name="e-mail" id="email-field" placeholder="kuklachev@gmail.com">
-        <button class="promo__button button" type="button">Подписаться</button>
+        <button class="subscription__button button" type="button">Подписаться</button>
       </form>
     </section>
     <section class="contacts">

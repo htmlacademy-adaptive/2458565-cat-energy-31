@@ -1,0 +1,15 @@
+.services {
+  background-color: $bg-base-gray-color;
+}
+
+.services__title {
+  @include title-font(24px, 37px);
+}
+
+.services__description {
+  text-align: left;
+}
+
+.services__link {
+  @include title-font(16px, 16px);
+}

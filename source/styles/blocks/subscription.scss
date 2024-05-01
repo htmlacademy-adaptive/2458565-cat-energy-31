@@ -1,0 +1,19 @@
+.subscription {
+
+}
+
+.subscription__title {
+  @include title-font(24px, 24px, normal);
+}
+
+.subscription__description {
+  @include title-font(16px, 24px, normal);
+}
+
+.subscription__form {
+
+}
+
+.subscription__button {
+
+}

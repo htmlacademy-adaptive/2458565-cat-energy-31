@@ -1,0 +1,25 @@
+.contacts {
+
+}
+
+.contacts__wrapper {
+
+}
+
+.contacts__container {
+
+}
+
+.contacts__slogan {
+  @include title-font(16px, 20px);
+  color: #111111;
+}
+
+.contacts__address {
+  line-height: 20px;
+  font-style: normal;
+}
+
+.contacts__map-image {
+
+}

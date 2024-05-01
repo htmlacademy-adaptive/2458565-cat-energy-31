@@ -1,0 +1,20 @@
+.product {
+  line-height: 14px;
+}
+
+.product__title {
+  @include title-font(16px, 16px);
+  color: #222222;
+}
+
+.product__description {
+
+}
+
+.product__price {
+
+}
+
+.product__link {
+
+}

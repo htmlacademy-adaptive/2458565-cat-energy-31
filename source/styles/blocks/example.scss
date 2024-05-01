@@ -1,0 +1,27 @@
+.example {
+  background-color: #eaeaea;
+}
+
+.example__wrapper {
+
+}
+
+.example__title {
+  @include title-font;
+}
+
+.example__description {
+
+}
+
+.example__list {
+
+}
+
+.example__text {
+  @include title-font(14px, 20px);
+}
+
+.example__image {
+
+}

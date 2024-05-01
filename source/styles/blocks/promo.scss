@@ -1,0 +1,22 @@
+.promo {
+  font-family: $secondary-font;
+  color: #ffffff;
+  background-color: $bg-base-green-color;
+}
+
+.promo__title {
+  @include title-font(36px, 36px, normal);
+}
+
+.promo__slogan {
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.promo__image {
+
+}
+
+.promo__link {
+
+}
