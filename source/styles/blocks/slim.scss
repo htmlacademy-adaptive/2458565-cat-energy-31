@@ -2,6 +2,22 @@
 
 // }
 
-// .slim__link {
+.slim__title {
+  position: relative;
+}
 
-// }
+.slim__title::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 36px;
+  height: 50px;
+  top: -3px;
+  left: 7px;
+  background-image: url("../../icons/stack.svg#cat");
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-position: center;
+}
+
+

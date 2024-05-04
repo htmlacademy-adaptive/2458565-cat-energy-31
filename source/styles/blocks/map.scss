@@ -1,0 +1,13 @@
+.map {
+  position: relative;
+}
+
+.map__pin {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: #cccccc;
+  z-index: 1;
+}

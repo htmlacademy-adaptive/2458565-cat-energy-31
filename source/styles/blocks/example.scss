@@ -8,6 +8,7 @@
 
 .example__title {
   @include title-font;
+  text-transform: none;
 }
 
 // .example__description {
