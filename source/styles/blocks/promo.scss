@@ -1,11 +1,11 @@
 .promo {
-  font-family: $secondary-font;
   color: #ffffff;
   background-color: $bg-base-green-color;
 }
 
 .promo__title {
-  @include title-font(36px, 36px, normal);
+  @include title-font(36px, 36px, none);
+  color: #ffffff;
 }
 
 .promo__slogan {

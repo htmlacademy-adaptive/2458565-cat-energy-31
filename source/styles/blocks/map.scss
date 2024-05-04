@@ -1,0 +1,16 @@
+.map {
+  position: relative;
+}
+
+.map__pin {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 57px;
+  height: 53px;
+  top: 0;
+  left: 0;
+  background-image: url("../../icons/stack.svg#map_pin")
+  background-color: #000000;
+  z-index: 1;
+}

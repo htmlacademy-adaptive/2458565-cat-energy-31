@@ -2,6 +2,19 @@
 
 // }
 
-// .pro__link {
+.pro__title {
+  position: relative;
+}
 
-// }
+.pro__title::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 67px;
+  height: 28px;
+  top: 11px;
+  left: -9px;
+  background-image: url("../../icons/stack.svg#panther");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
