@@ -10,6 +10,6 @@
 
 // }
 
-// .main-navigation__list {
-
-// }
+.main-navigation__list {
+  @include list-style;
+}

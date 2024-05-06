@@ -5,7 +5,7 @@
 
 .promo__title {
   @include title-font(36px, 36px, none);
-  color: #ffffff;
+  color: $accent-color;
 }
 
 .promo__slogan {

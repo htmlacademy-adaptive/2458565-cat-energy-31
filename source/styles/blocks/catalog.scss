@@ -6,16 +6,38 @@
   @include title-font(36px, 36px, normal);
 }
 
-// .catalog__list {
+.catalog__list {
+  @include list-style;
+}
 
-// }
+.catalog__item {
+  background-color: $bg-base-gray-color;
+}
 
-// .catalog__item {
-
-// }
+.catalog__button-container {
+  position: relative;
+}
 
 .catalog__text {
+  margin-top: 110px;
+
   @include title-font(16px, 20px);
+}
+
+.catalog__button-container::before,
+.catalog__button-container::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  top: -53px;
+  left: 0;
+  background-color: #d3d3d3;
+}
+
+.catalog__button-container::after {
+  transform: rotate(90deg);
 }
 
 .catalog__legend {

@@ -3,7 +3,20 @@
 // }
 
 .subscription__title {
+  position: relative;
+
   @include title-font(24px, 24px, normal);
+}
+
+.subscription__title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 108px;
+  height: 2px;
+  top: 50%;
+  left: 192px;
+  background-color: $bg-base-green-color;
 }
 
 .subscription__description {
@@ -13,6 +26,11 @@
 // .subscription__form {
 
 // }
+
+.subscription__form-input {
+  @include title-font(20px, 29px, uppercase);
+  color: $base-color;
+}
 
 // .subscription__button {
 
