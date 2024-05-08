@@ -1,0 +1,29 @@
+// .range {
+
+// }
+
+.range__range-bar {
+  position: relative;
+  display: block;
+  width: 2px;
+  height: 100px;
+  left: 50%;
+  background-color: $mask-bg-base-gray-color;
+  transform: rotate(180deg);
+}
+
+.range__button {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 2px solid $mask-bg-base-gray-color;
+  background-image: url("../../icons/stack.svg#slider-arrow");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 18px;
+}

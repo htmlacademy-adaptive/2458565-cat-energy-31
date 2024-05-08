@@ -52,4 +52,10 @@
 .catalog__button--accent {
   color: #444444;
   background-color: $bg-base-gray-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $special-hover-gray;
+  }
 }

@@ -4,4 +4,14 @@
   color: $accent-color;
   background-color: $bg-base-green-color;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $base-hover-green;
+  }
+
+  &:active {
+    background-color: $base-hover-green;
+    opacity: 0.3;
+  }
 }

@@ -1,3 +1,17 @@
-// .logo__text-image {
+.logo__image:hover,
+.logo__image:focus {
+  opacity: 0.8;
 
-// }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__text-image:hover,
+.logo__text-image:focus {
+  opacity: 0.8;
+
+  &:active {
+    opacity: 0.5;
+  }
+}

@@ -6,6 +6,22 @@
 
 // }
 
-// .site-list__item--current {
+.site-list__item a {
+  @include title-font(20px, 29px);
 
-// }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-list__item--current {
+  text-decoration: underline;
+  text-decoration-color: $bg-base-green-color;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}

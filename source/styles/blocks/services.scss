@@ -1,15 +1,9 @@
 .services {
+  position: relative;
   background-color: $bg-base-gray-color;
 }
 
-.services__title {
-  position: relative;
-
-  @include title-font(24px, 37px);
-  text-align: center;
-}
-
-.services__title::after {
+.services::after {
   position: absolute;
   content: "";
   display: block;
@@ -21,23 +15,41 @@
   border-radius: 50%;
 }
 
+.services__title {
+  @include title-font(24px, 37px);
+  text-align: center;
+}
+
 .services__description {
   text-align: left;
 }
 
 .services__link {
   position: relative;
+  display: inline-block;
 
   @include title-font(16px, 16px);
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1.1);
+    transition: 0.2s;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .services__link::after {
   position: absolute;
   content: "";
+  display: block;
   width: 24px;
   height: 12px;
-  top: 6px;
+  top: 0;
   right: -39px;
   background-image: url("../../icons/stack.svg#arrow");
   background-repeat: no-repeat;
+  background-position: center;
 }

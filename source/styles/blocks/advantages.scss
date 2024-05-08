@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-.advantages__item::after {
+.advantages__item::before {
   position: absolute;
   content: "";
   display: block;
@@ -26,6 +26,8 @@
   top: 0;
   left: 0;
   background-color: $bg-base-green-color;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 
 .advantages__item-nutrition {
@@ -35,14 +37,10 @@
 .advantages__item-nutrition::before {
   position: absolute;
   content: "";
-  display: block;
-  width: 25px;
-  height: 28px;
-  top: 16px;
-  left: 18px;
   background-image: url("../../icons/stack.svg#leaf");
   background-repeat: no-repeat;
-  z-index: 1;
+  background-size: 25px 28px;
+  background-position: center;
 }
 
 .advantages__item-structure {
@@ -53,13 +51,10 @@
   position: absolute;
   content: "";
   display: block;
-  width: 26px;
-  height: 29px;
-  top: 16px;
-  left: 17px;
   background-image: url("../../icons/stack.svg#water");
   background-repeat: no-repeat;
-  z-index: 1;
+  background-size: 26px 29px;
+  background-position: center;
 }
 
 .advantages-item-eating {
@@ -70,13 +65,10 @@
   position: absolute;
   content: "";
   display: block;
-  width: 25px;
-  height: 30px;
-  top: 15px;
-  left: 17px;
   background-image: url("../../icons/stack.svg#icon-eat");
   background-repeat: no-repeat;
-  z-index: 1;
+  background-size: 25px 30px;
+  background-position: center;
 }
 
 .advantages__item-benefit {
@@ -87,11 +79,8 @@
   position: absolute;
   content: "";
   display: block;
-  width: 26px;
-  height: 31px;
-  top: 15px;
-  left: 17px;
   background-image: url("../../icons/stack.svg#clock");
   background-repeat: no-repeat;
-  z-index: 1;
+  background-size: 26px 31px;
+  background-position: center;
 }

@@ -10,6 +10,16 @@
 
 // }
 
-// .copyrights__image {
+.copyrights__image {
+  fill: #666666;
 
-// }
+  &:hover,
+  &:focus {
+    fill: $bg-base-green-color;
+  }
+
+  &:active {
+    fill: $bg-base-green-color;
+    opacity: 0.3;
+  }
+}
