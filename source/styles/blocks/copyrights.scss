@@ -1,14 +1,17 @@
-// .copyrights {
+.copyrights {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
 
-// }
+.copyrights__link {
+  display: block;
+  color: $base-color;
+}
 
-// .copyrights__text {
-
-// }
-
-// .copyrights__link {
-
-// }
+.copyrights__text {
+  width: 113px;
+}
 
 .copyrights__image {
   fill: #666666;

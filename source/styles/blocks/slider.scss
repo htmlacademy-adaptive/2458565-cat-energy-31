@@ -1,0 +1,32 @@
+:root {
+  --left: 80%;
+}
+
+// .slider {
+
+// }
+
+.slider__wrapper {
+  position: relative;
+  width: 280px;
+  height: 256px;
+  background-color: #eaeaea;
+}
+
+.slider__wrapper-before {
+  position: relative;
+  width: 50%;
+  height: 256px;
+  top: 0;
+  left: 0;
+  background-color: #eaeaea;
+  overflow: hidden;
+}
+
+.slider__wrapper-after {
+  position: absolute;
+  width: var(--left);
+  height: 256px;
+  top: 0;
+  left: 0;
+}

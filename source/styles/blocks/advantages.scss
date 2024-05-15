@@ -1,20 +1,53 @@
-// .advantages {
+.advantages {
+  min-width: 280px;
+  margin: 0 20px;
+  padding-bottom: 49px;
 
-// }
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
 
 .advantages__title {
   @include title-font;
+  margin-top: 0;
   text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .advantages__list {
   @include list-style;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 137px;
+  }
 }
 
 .advantages__item {
   position: relative;
-  margin-bottom: 80px;
-  text-align: center;
+  margin-bottom: 20px;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    min-height: 280px;
+  }
+}
+
+.advantages__item-description {
+  margin-top: 0;
+  min-width: 200px;
+  min-height: 54px;
+  margin-left: 80px;
+
+  @media (min-width: $tablet-width) {
+    float: left;
+    min-width: 246px;
+  }
 }
 
 .advantages__item::before {
@@ -28,10 +61,27 @@
   background-color: $bg-base-green-color;
   background-position: 50%;
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
 }
 
 .advantages__item-nutrition {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 112px;
+    height: 280px;
+    top: 0;
+    left: 0;
+    background-image: url("../../icons/stack.svg#1");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .advantages__item-nutrition::before {

@@ -1,14 +1,14 @@
 // .range {
-
 // }
 
 .range__range-bar {
-  position: relative;
-  display: block;
-  width: 2px;
-  height: 100px;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
   left: 50%;
   background-color: $mask-bg-base-gray-color;
+  border-radius: 2px;
   transform: rotate(180deg);
 }
 
@@ -18,8 +18,8 @@
   display: block;
   width: 40px;
   height: 40px;
-  top: 0;
-  left: 0;
+  top: 43%;
+  left: -18px;
   border-radius: 50%;
   border: 2px solid $mask-bg-base-gray-color;
   background-image: url("../../icons/stack.svg#slider-arrow");

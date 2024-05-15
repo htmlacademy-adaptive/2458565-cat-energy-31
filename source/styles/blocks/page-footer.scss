@@ -1,14 +1,21 @@
-// .page-footer {
+.page-footer {
+  min-width: 320px;
+}
 
-// }
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: $bg-base-gray-color;
+}
 
-// .page-footer__wrapper {
-
-// }
-
-// .page-footer__link {
-
-// }
+.page-footer__link {
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+  width: 128px;
+  height: 24px;
+}
 
 // .page-footer__container {
 

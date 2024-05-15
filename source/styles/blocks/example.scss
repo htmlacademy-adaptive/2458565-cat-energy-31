@@ -1,28 +1,44 @@
 .example {
+  width: 100%;
+  min-width: 320px;
   background-color: #eaeaea;
 }
 
-// .example__wrapper {
-
-// }
+.example__wrapper {
+  min-width: 280px;
+  padding: 25px 20px 40px;
+}
 
 .example__title {
   @include title-font;
+  margin-top: 0;
   text-transform: none;
 }
 
-// .example__description {
+.example__description {
+  width: 100%;
+  min-height: 108px;
+}
 
-// }
-
-// .example__list {
-
-// }
+.example__list {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
 
 .example__text {
   @include title-font(14px, 20px);
+  text-align: center;
 }
 
-// .example__image {
+.example__slider-container {
+  position: relative;
+  margin: 0 auto;
+  width: 280px;
+  height: 256px;
+}
 
-// }
+.example__image {
+  width: 280px;
+  height: 256px;
+}

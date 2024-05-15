@@ -2,14 +2,36 @@
 
 // }
 
-// .main-navigation__toggle {
-
-// }
-
-// .main-navigation__wrapper {
-
-// }
+.main-navigation__toggle {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../icons/stack.svg#navigation-button");
+  background-repeat: no-repeat;
+  background-color: $accent-color;
+  border: none;
+}
 
 .main-navigation__list {
   @include list-style;
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 436px;
+  }
+
+  .main-navigation__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation__list {
+    min-width: 475px;
+  }
 }

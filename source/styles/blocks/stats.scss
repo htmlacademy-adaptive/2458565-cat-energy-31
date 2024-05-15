@@ -1,16 +1,27 @@
-// .stats {
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+}
 
-// }
-
-// .stats__item {
-
-// }
+.stats__item {
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+}
 
 .stats__title {
   @include title-font(24px, 24px);
+  margin: 0 auto;
+  margin-bottom: 23px;
+  padding: 14px 20px 0;
 }
 
 .stats__description {
+  margin: -15px auto;
+  padding: 0 11px;
+  width: 60px;
   font-size: 12px;
   line-height: 12px;
+  background-color: #eaeaea;
 }

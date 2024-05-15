@@ -4,6 +4,11 @@
 
 .socials__list {
   @include list-style;
+  display: flex;
+  gap: 24px;
+  margin: 0 auto;
+  width: 132px;
+  min-height: 22px;
 }
 
 // .socials__item {

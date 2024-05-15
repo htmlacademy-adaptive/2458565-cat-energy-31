@@ -1,7 +1,18 @@
-// .page-header {
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 13px 20px 14px;
+  min-width: 280px;
+  min-height: 38px;
 
-// }
+  @media (min-width: $tablet-width) {
+    margin: 25px 0 65px;
+  }
+}
 
-// .page-header__link {
-
-// }
+.page-header__link {
+  display: block;
+  width: 170px;
+  height: 38px;
+}

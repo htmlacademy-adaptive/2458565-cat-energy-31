@@ -1,21 +1,32 @@
-// .slim {
-
-// }
-
-.slim__title {
+.slim {
   position: relative;
 }
 
-.slim__title::before {
+.slim::before {
   position: absolute;
   content: "";
   display: block;
   width: 36px;
   height: 50px;
-  top: -3px;
-  left: 7px;
+  top: 21px;
+  left: 27px;
   background-image: url("../../icons/stack.svg#cat");
   background-repeat: no-repeat;
   z-index: 1;
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 140px;
+    height: 194px;
+    top: 81px;
+    left: 475px;
+  }
+}
+
+.slim__title {
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }

@@ -1,20 +1,31 @@
-// .pro {
-
-// }
-
-.pro__title {
+.pro {
   position: relative;
 }
 
-.pro__title::before {
+.pro::before {
   position: absolute;
   content: "";
   display: block;
   width: 67px;
   height: 28px;
-  top: 11px;
-  left: -9px;
+  top: 35px;
+  left: 12px;
   background-image: url("../../icons/stack.svg#panther");
   background-repeat: no-repeat;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 112px;
+    top: 135px;
+    left: 412px;
+  }
+}
+
+.pro__title {
+  margin-left: 44px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }
