@@ -21,6 +21,13 @@
     top: 81px;
     left: 475px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 97px;
+    top: 41px;
+    left: 67px;
+  }
 }
 
 .slim__title {

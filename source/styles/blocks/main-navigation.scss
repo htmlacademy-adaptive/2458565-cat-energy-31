@@ -1,20 +1,55 @@
-// .main-navigation {
-
-// }
+.main-navigation {
+  margin: 0;
+  width: 40px;
+}
 
 .main-navigation__toggle {
+  position: absolute;
   display: block;
-  width: 24px;
-  height: 24px;
-  background-image: url("../../icons/stack.svg#navigation-button");
+  width: 18px;
+  height: 18px;
+  top: 23px;
+  right: 20px;
+  background-image: url("../../icons/stack.svg#navigation-close-button");
   background-repeat: no-repeat;
-  background-color: $accent-color;
+  background-color: transparent;
   border: none;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    max-height: 100%;
+    z-index: 0;
+  }
+}
+
+.main-navigation__toggle input[type="checkbox"] {
+  display: none;
+
+  &:checked ~ .main-navigation__list {
+    display: block;
+  }
 }
 
 .main-navigation__list {
   @include list-style;
-  display: none;
+  position: relative;
+  display: block;
+  min-width: 200px;
+  margin: 0 auto;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    top: 140px;
+    left: -260px;
+    text-align: center;
+    background-color: $accent-color;
+    z-index: 1;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -23,6 +58,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 436px;
+    margin: 0;
   }
 
   .main-navigation__toggle {

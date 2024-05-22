@@ -1,10 +1,10 @@
-// .page {
-
-// }
+.page {
+  margin: 0;
+}
 
 .page__body {
-  margin: 0;
-  width: 100%;
+  margin: 0 auto;
+  min-width: 280px;
 
   @media (min-width: $tablet-width) {
     width: calc(100% - 60px);
@@ -12,7 +12,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 80%;
-    max-width: 1440px;
+
+    width: 1440px;
+    margin: 0 auto;
   }
 }

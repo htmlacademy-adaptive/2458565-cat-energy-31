@@ -1,9 +1,12 @@
-// .subscription {
-
-// }
+.subscription {
+  min-width: 280px;
+  padding: 40px 20px;
+}
 
 .subscription__title {
   position: relative;
+  margin-top: 0;
+  margin-bottom: 32px;
 
   @include title-font(24px, 24px, normal);
 }
@@ -14,21 +17,28 @@
   display: block;
   width: 108px;
   height: 2px;
-  top: 50%;
+  top: 48%;
   left: 192px;
   background-color: $bg-base-green-color;
 }
 
 .subscription__description {
   @include title-font(16px, 24px, normal);
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 // .subscription__form {
-
 // }
 
 .subscription__form-input {
   @include title-font(20px, 29px, uppercase);
+  width: 280px;
+  min-height: 30px;
+  margin: 0 auto;
+  padding: 5px;
+  box-sizing: border-box;
   color: $base-color;
 }
 

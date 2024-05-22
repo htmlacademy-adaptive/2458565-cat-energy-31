@@ -1,12 +1,16 @@
 .info-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 140px;
   font-size: 12px;
   line-height: 16px;
 }
 
-// .info-list__title {
+.info-list__title {
+  text-align: left;
+}
 
-// }
-
-// .info-list__description {
-
-// }
+.info-list__description {
+  text-align: right;
+  min-width: 40px;
+}

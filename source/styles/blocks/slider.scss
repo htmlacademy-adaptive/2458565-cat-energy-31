@@ -2,15 +2,16 @@
   --left: 80%;
 }
 
-// .slider {
-
-// }
-
 .slider__wrapper {
   position: relative;
   width: 280px;
   height: 256px;
-  background-color: #eaeaea;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+    background: linear-gradient(to bottom, $accent-color 30%, #eaeaea 30%);
+  }
 }
 
 .slider__wrapper-before {
@@ -21,6 +22,11 @@
   left: 0;
   background-color: #eaeaea;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    min-height: 512px;
+  }
 }
 
 .slider__wrapper-after {
@@ -29,4 +35,9 @@
   height: 256px;
   top: 0;
   left: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    min-height: 512px;
+  }
 }

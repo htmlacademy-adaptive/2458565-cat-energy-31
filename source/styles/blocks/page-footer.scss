@@ -7,6 +7,23 @@
   flex-direction: column;
   gap: 40px;
   background-color: $bg-base-gray-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    padding: 55px 30px;
+    width: 708px;
+    min-height: 37px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    padding: 66px 110px;
+    width: 1220px;
+  }
 }
 
 .page-footer__link {
@@ -15,12 +32,19 @@
   padding-top: 40px;
   width: 128px;
   height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 // .page-footer__container {
 
 // }
 
-// .page-footer__copyrights {
-
-// }
+.page-footer__copyrights {
+  @media (min-width: $tablet-width) {
+    width: 168px;
+  }
+}

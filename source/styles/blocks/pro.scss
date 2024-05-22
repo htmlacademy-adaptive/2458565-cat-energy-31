@@ -20,6 +20,13 @@
     top: 135px;
     left: 412px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 56px;
+    top: 67px;
+    left: 33px;
+  }
 }
 
 .pro__title {
