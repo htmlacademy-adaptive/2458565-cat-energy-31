@@ -1,9 +1,12 @@
 .example {
   min-width: 280px;
+  margin: 0 auto;
   padding: 25px 20px 40px;
   background-color: #eaeaea;
 
   @media (min-width: $tablet-width) {
+    min-width: 708px;
+    margin: 0 auto;
     padding: 0;
     background-color: $accent-color;
   }
@@ -110,10 +113,10 @@
 
 .example__slider-background {
   @media (min-width: $tablet-width) and (max-width: 1439px) {
-    margin-left: -30px;
     box-sizing: border-box;
-    padding-bottom: 151px;
-    width: 768px;
+    padding-bottom: 0 30px 151px;
+    margin: 0;
+    min-width: 768px;
     background: linear-gradient(to bottom, $accent-color 154px, #eaeaea 154px);
   }
 }

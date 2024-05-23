@@ -19,16 +19,17 @@
 .services__container {
   position: relative;
   background-color: $bg-base-gray-color;
-  margin: 0 auto;
+  margin: 0 20px;
   margin-bottom: 20px;
   min-width: 280px;
   min-height: 266px;
 
   @media (min-width: $tablet-width) {
+    margin: 0 auto;
     margin-bottom: 30px;
-    width: 633px;
+    width: 708px;
     min-height: 372px;
-    padding: 77px 0 53px 52px;
+    padding: 77px 23px 53px 52px;
     box-sizing: border-box;
   }
 

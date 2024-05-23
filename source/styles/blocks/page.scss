@@ -7,13 +7,12 @@
   min-width: 280px;
 
   @media (min-width: $tablet-width) {
-    width: calc(100% - 60px);
     margin: 0 30px;
+    min-width: 708px;
   }
 
   @media (min-width: $desktop-width) {
-
-    width: 1440px;
     margin: 0 auto;
+    width: 1440px;
   }
 }

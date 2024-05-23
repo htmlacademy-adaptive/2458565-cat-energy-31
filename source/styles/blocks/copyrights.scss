@@ -1,7 +1,10 @@
 .copyrights {
   display: flex;
   justify-content: space-between;
-  margin: 0 20px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 20px;
+  }
 }
 
 .copyrights__link {

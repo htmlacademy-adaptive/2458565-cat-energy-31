@@ -1,17 +1,16 @@
 .page-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   min-width: 280px;
   min-height: 38px;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     margin: -79px 20px 0;
-    justify-content: space-between;
   }
 
   @media (min-width: $tablet-width) {
-    min-width: 768px;
-    gap: 300px;
+    width: 708px;
     margin: 25px 0 65px;
   }
 
