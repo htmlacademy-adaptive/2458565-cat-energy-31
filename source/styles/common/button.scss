@@ -1,14 +1,17 @@
 .button {
   @include title-font(16px, 20px);
-  min-width: 280px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 10px;
   box-sizing: border-box;
   text-align: center;
   text-transform: uppercase;
   color: $accent-color;
   background-color: $bg-base-green-color;
   border: none;
+
+  @media (max-width: $mobile-width) {
+    min-width: 280px;
+  }
 
   &:hover,
   &:focus {

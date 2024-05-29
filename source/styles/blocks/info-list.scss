@@ -4,6 +4,12 @@
   width: 140px;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+  }
 }
 
 .info-list__title {
@@ -13,4 +19,16 @@
 .info-list__description {
   text-align: right;
   min-width: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.info-list--decoration {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+    padding: 5px 0;
+    border-bottom: 1px solid #cdcdcd;
+  }
 }

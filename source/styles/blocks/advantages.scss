@@ -1,11 +1,14 @@
 .advantages {
-  margin: 0 20px;
   padding-bottom: 47px;
   margin-bottom: 45px;
 
+  @media (max-width: $mobile-width) {
+    margin: 0 20px;
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
-    margin: 0 auto;
+    margin: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -48,7 +51,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 37px 60px;
-    min-width: 710px;
+    width: 100%;
     padding-bottom: 47px;
   }
 

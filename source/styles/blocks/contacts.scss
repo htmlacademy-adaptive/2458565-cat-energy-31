@@ -3,7 +3,8 @@
   margin: 0 auto;
 
   @media (width: $tablet-width) {
-    min-width: 768px;
+    min-width: 100%;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -44,8 +45,8 @@
     content: "";
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin: 0;
     padding: 61px 80px 60px;
     width: 407px;
@@ -89,16 +90,34 @@
 
 .contacts__map {
   position: relative;
-  min-width: 320px;
+  display: block;
+  min-width: 100%;
+  min-height: 362px;
+  z-index: -2;
+  background-color: $bg-base-gray-color;
+
+  @media (max-width: $mobile-width) {
+    background: url("../../images/map-mobile@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
   @media (width: $tablet-width) {
-    min-width: 768px;
+    display: block;
+    width: 100%;
+    min-height: 400px;
+    background: url("../../images/map-tablet@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto;
-    width: 1440px;
+    display: block;
+    width: 100%;
     min-height: 400px;
+    background: url("../../images/map-desktop@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -112,6 +131,7 @@
   left: 134px;
   background-image: url("../../icons/stack.svg#map-pin");
   background-repeat: no-repeat;
+  z-index: -1;
 
   @media (min-width: $tablet-width) {
     width: 113px;
@@ -125,23 +145,5 @@
     height: 106px;
     top: 131px;
     left: 908px;
-  }
-}
-
-.contacts__map-image {
-  display: block;
-  width: 100%;
-  height: auto;
-
-
-  @media (min-width: $tablet-width) {
-    width: 768px;
-    margin: 0 auto;
-    height: auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 auto;
-    width: 1440px;
   }
 }

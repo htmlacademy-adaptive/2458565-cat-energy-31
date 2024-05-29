@@ -1,27 +1,54 @@
 .products {
   min-width: 320px;
-  margin: 0;
-  padding: 0 20px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .products__title {
-  @include title-font(24px, 24px, normal);
+  @include title-font(24px, 24px, none);
   position: relative;
   margin-top: 0;
   margin-bottom: 36px;
-  min-width: 226px;
+  margin-left: 20px;
+  width: fit-content;
   min-height: 24px;
+  background-color: $accent-color;
+  box-shadow:
+    -20px 0 0 0 $accent-color,
+    20px 0 0 0 $accent-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+    margin-left: 70px;
+    font-size: 32px;
+    line-height: 32px;
+    box-shadow:
+      -40px 0 0 0 $accent-color,
+      40px 0 0 0 $accent-color;
+  }
 
   &::after {
     position: absolute;
     content: "";
     display: block;
-    top: 46%;
-    right: -20px;
-    min-width: 34px;
+    top: 45%;
+    right: 0;
+    width: 100vw;
     height: 2px;
     background-color: $bg-base-green-color;
+    box-shadow: 100vw 0 0 0 $bg-base-green-color;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      top: 50%;
+    }
+  }
+}
+
+.products__box {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -30,47 +57,65 @@
   display: flex;
   flex-flow: column wrap;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    border: 1px solid #cdcdcd;
+    margin: 0 30px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 896px;
+  }
 }
 
 .products__item {
-  padding: 13px 0 19px;
-  min-width: 280px;
-  margin: 0 auto;
-  border-top: 1px solid #cdcdcd;
+  @media (max-width: $mobile-width) {
+    padding: 13px 0 19px;
+    min-width: 280px;
+    margin: 0 auto;
+    border-top: 1px solid #cdcdcd;
 
-  &:last-child {
+    &:nth-child(4n) {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 632px;
+    padding: 26px 38px;
     border-bottom: 1px solid #cdcdcd;
+
+    &:nth-child(4n) {
+      border-bottom: none;
+    }
   }
 }
 
 .products__promo-container {
   position: relative;
   display: block;
-  min-width: 280px;
-  min-height: 290px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/products-background@2x.png");
+  margin: 0 auto;
   background-repeat: no-repeat;
+  background-color: $bg-base-green-color;
   background-size: cover;
-}
 
-@media (min-width: 768px) {
-  .products__promo-container {
-    position: relative;
-    display: block;
-    min-width: 707px;
-    min-height: 200px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/products-background-tablet-@2x.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-@media (min-width: 1440px) {
-  .products__promo-container {
-    position: relative;
-    display: block;
+  @media (max-width: $mobile-width) {
     min-width: 280px;
     min-height: 290px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/products-background@2x.png");
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    position: relative;
+    display: block;
+    width: 707px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/products-background-tablet-@2x.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 245px;
+    min-height: 288px;
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/products-background@2x.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,6 +132,13 @@
   left: 37%;
   background-image: url("../../icons/stack.svg#icon-gift");
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 83px;
+    top: 57px;
+    left: 77px;
+  }
 }
 
 .products__description {
@@ -96,4 +148,10 @@
   line-height: 20px;
   text-align: center;
   color: $accent-color;
+
+  @media (min-width: $tablet-width) {
+    width: 161px;
+    padding: 71px 125px 69px 421px;
+    text-align: left;
+  }
 }

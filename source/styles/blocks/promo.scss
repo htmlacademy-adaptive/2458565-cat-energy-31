@@ -1,39 +1,51 @@
 .promo {
-  position: relative;
   margin: 0 auto;
   margin-bottom: 20px;
-  width: 100%;
   min-width: 280px;
   min-height: 480px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    position: relative;
     min-width: 708px;
-    margin: 0 auto;
+    margin: 0 30px;
     background-color: $accent-color;
     background-image: none;
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     margin-bottom: 82px;
-    width: 600px;
-    min-height: 462px;
+    min-width: 100%;
+    min-height: 580px;
+    background-color: transparent;
   }
 }
 
 .promo__background-container {
   margin: 0 auto;
-  min-width: 320px;
-  min-height: 302px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/index-cat-background-mobile@2x.webp");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  object-fit: contain;
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    min-height: 302px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/index-cat-background-mobile@2x.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    object-fit: contain;
+  }
 
   @media (min-width: $tablet-width) {
-    background-image: none;
-    margin-left: 80px;
+    margin-left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: 414px;
+    padding: 110px 116px 194px 100px;
   }
 }
 
@@ -47,7 +59,8 @@
   @media (min-width: $tablet-width) {
     @include title-font-tablet;
     width: 424px;
-    margin: 0 0 40px 90px;
+    margin: 0;
+    margin-bottom: 40px;
     padding: 0;
     text-align: left;
   }
@@ -60,7 +73,7 @@
   color: $accent-color;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 21px 90px;
+    margin-bottom: 21px;
     font-size: 20px;
     line-height: 20px;
     text-align: left;
@@ -72,40 +85,26 @@
   }
 }
 
-.promo__picture-container {
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    width: 100%;
-    min-width: 720px;
-    min-height: 694px;
-    top: -253px;
-    left: 720px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/index-cat-background-desktop 1@2x.png");
-    background-repeat: no-repeat;
-    background-size: 720px auto;
-    object-fit: contain;
-  }
-}
-
 .promo__image {
   display: block;
   box-sizing: border-box;
   min-width: 280px;
   margin: 0 auto;
   margin-top: -135px;
+  background-color: transparent;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
     display: block;
     min-width: 709px;
-    margin-top: -100px;
+    margin-top: 4%;
     margin-left: -40px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 552px;
     height: auto;
-    margin-top: 174px;
-    margin-left: -162px;
+    margin-top: 4%;
+    margin-left: -23%;
   }
 }
 
@@ -120,19 +119,18 @@
     position: absolute;
     content: "";
     margin: 0;
-    padding: 14px 26px;
-    top: 230px;
-    left: 90px;
-    box-sizing: border-box;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 80px;
-    padding: 14px 26px;
     box-sizing: border-box;
     width: 244px;
     min-height: 54px;
+    top: 230px;
+    left: 90px;
     font-size: 20px;
     line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 14px 26px;
+    top: 342px;
+    left: 190px;
   }
 }

@@ -1,0 +1,87 @@
+.button-container {
+  position: relative;
+  margin-top: 0;
+  min-width: 280px;
+  min-height: 207px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 25px;
+    padding: 0 20px;
+    border-bottom: 1px solid $special-hover-gray;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 250px;
+    padding: 70px 37px 40px;
+    border: 2px solid $bg-base-gray-color;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 20%;
+    left: 45%;
+    background-color: #d3d3d3;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+    }
+  }
+}
+
+.button-container::after {
+  transform: rotate(90deg);
+}
+
+.button-container__text {
+  @include title-font(16px, 20px);
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding-top: 78px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 50px auto 23px;
+    width: 134px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.button-container__legend {
+  margin-top: 0;
+  margin-bottom: 21px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 87px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+// .catalog__button {
+
+// }
+
+.catalog__button--accent {
+  color: #444444;
+  background-color: $bg-base-gray-color;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $special-hover-gray;
+  }
+}
