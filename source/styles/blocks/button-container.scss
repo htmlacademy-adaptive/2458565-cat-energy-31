@@ -1,18 +1,28 @@
 .button-container {
   position: relative;
-  margin-top: 0;
-  min-width: 280px;
   min-height: 207px;
 
   @media (max-width: $mobile-width) {
+    margin-top: 0;
+    min-width: 280px;
     margin-bottom: 25px;
     padding: 0 20px;
     border-bottom: 1px solid $special-hover-gray;
   }
 
-  @media (min-width: $tablet-width) {
-    min-width: 250px;
-    padding: 70px 37px 40px;
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-top: 50px;
+    width: 250px;
+    padding: 85px 35px 40px;
+    border: 2px solid $bg-base-gray-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    min-height: 430px;
+    margin-top: 47px;
+    padding: 34px 37px 40px;
+    box-sizing: border-box;
     border: 2px solid $bg-base-gray-color;
   }
 
@@ -23,12 +33,22 @@
     display: block;
     width: 30px;
     height: 2px;
-    top: 20%;
-    left: 45%;
     background-color: #d3d3d3;
+
+    @media (min-width: $mobile-width) and (max-width: 767px) {
+      top: 18%;
+      left: 45%;
+    }
 
     @media (min-width: $tablet-width) {
       width: 60px;
+      top: 18%;
+      left: 40%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 19%;
+      left: 39%;
     }
   }
 }
@@ -39,49 +59,46 @@
 
 .button-container__text {
   @include title-font(16px, 20px);
-  margin-top: 0;
-  margin-bottom: 8px;
-  padding-top: 78px;
-  text-align: center;
 
-  @media (min-width: $tablet-width) {
-    margin: 50px auto 23px;
-    width: 134px;
-    font-size: 20px;
-    line-height: 24px;
+  @media (min-width: $mobile-width) {
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding-top: 78px;
     text-align: center;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    @include title-font(20px, 24px);
+    margin: 0 auto 23px;
+    width: 134px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include title-font(20px, 24px);
+    margin: 40px auto 26px;
   }
 }
 
 .button-container__legend {
   margin-top: 0;
-  margin-bottom: 21px;
-  font-size: 12px;
-  line-height: 16px;
   text-align: center;
 
+  @media (max-width: $mobile-width) {
+    margin-bottom: 21px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 87px;
+    width: 165px;
+    margin: 0 auto 81px;
     font-size: 16px;
     line-height: 18px;
   }
-}
 
-// .catalog__button {
-
-// }
-
-.catalog__button--accent {
-  color: #444444;
-  background-color: $bg-base-gray-color;
-
-  @media (min-width: $tablet-width) {
-    width: 100%;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: $special-hover-gray;
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    margin: 0 auto 86px;
   }
 }

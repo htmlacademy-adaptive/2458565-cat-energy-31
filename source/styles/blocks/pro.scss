@@ -30,9 +30,18 @@
 }
 
 .pro__title {
-  margin-left: 44px;
+  margin-left: 71px;
+  width: fit-content;
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
+  }
+}
+
+.pro__link::after {
+  left: 100px;
+
+  @media (min-width: $tablet-width) {
+    left: 129px;
   }
 }

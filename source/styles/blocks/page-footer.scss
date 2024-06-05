@@ -1,27 +1,24 @@
 .page-footer {
-  min-width: 320px;
-
-  @media (min-width: $tablet-width) {
-    min-height: 37px;
-  }
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: $bg-base-gray-color;
 }
 
 .page-footer__wrapper {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 0 20px;
+  flex-flow: column wrap;
+  gap: 38px;
+  padding: 40px 20px;
   width: 100%;
   box-sizing: border-box;
-  background-color: $bg-base-gray-color;
 
   @media (min-width: $tablet-width) {
-    min-width: 768px;
-    padding: 30px;
+    padding: 58px 30px;
     box-sizing: border-box;
     flex-flow: row wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 0;
   }
 
@@ -29,30 +26,65 @@
     margin: 0 auto;
     padding: 66px 110px;
     width: 100%;
+    justify-content: space-between;
+  }
+
+  &::before {
+    @media (min-width: $mobile-width) and (max-width: 767px) {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      top: 34%;
+      left: 0;
+      background-color: rgba(217, 217, 217, 1);
+    }
+  }
+
+  &::after {
+    @media (min-width: $mobile-width) and (max-width: 767px) {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      top: 60%;
+      left: 0;
+      background-color: rgba(217, 217, 217, 1);
+    }
   }
 }
 
 .page-footer__link {
   display: block;
-  margin: 0 auto;
-  padding-top: 40px;
   width: 128px;
   height: 24px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
     margin: 0;
+    margin-right: 23%;
     padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 34%;
   }
 }
 
 .page-footer__container {
-  @media (max-width: $mobile-width) {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
     width: 100%;
   }
 }
 
 .page-footer__copyrights {
   @media (min-width: $tablet-width) {
-    min-width: 168px;
+    width: 168px;
+    margin-left: auto;
   }
 }

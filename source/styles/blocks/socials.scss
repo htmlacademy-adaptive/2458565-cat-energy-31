@@ -1,7 +1,3 @@
-// .socials {
-
-// }
-
 .socials__list {
   @include list-style;
   display: flex;
@@ -10,10 +6,6 @@
   width: 132px;
   min-height: 22px;
 }
-
-// .socials__item {
-
-// }
 
 .socials__link {
   display: block;
@@ -36,6 +28,7 @@
   mask-image: url("../../icons/stack.svg#vk");
   mask-repeat: no-repeat;
   mask-position: center;
+  mask-size: 27px 17px;
 }
 
 .socials__link--youtube {
@@ -43,6 +36,7 @@
   mask-image: url("../../icons/stack.svg#youtube");
   mask-repeat: no-repeat;
   mask-position: center;
+  mask-size: 24px 19px;
 }
 
 .socials__link--telegram {
@@ -50,4 +44,5 @@
   mask-image: url("../../icons/stack.svg#telegram");
   mask-repeat: no-repeat;
   mask-position: center;
+  mask-size: 20px 17px;
 }

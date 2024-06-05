@@ -31,9 +31,17 @@
 }
 
 .slim__title {
-  margin-left: 20px;
+  margin-left: 70px;
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
+  }
+}
+
+.slim__link::after {
+  left: 102px;
+
+  @media (min-width: $tablet-width) {
+    left: 133px;
   }
 }

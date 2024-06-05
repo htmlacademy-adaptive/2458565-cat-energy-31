@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 
@@ -24,14 +24,13 @@
   border: 1px solid #cdcdcd;
   border-radius: 4px;
 
-  @media (max-width: $mobile-width) {
-    width: 124px;
+  @media (min-width: $mobile-width) and (max-width: 767px) {
     min-height: 56px;
   }
 
   @media (min-width: $tablet-width) {
     width: 162px;
-    min-height: 72px;
+    min-height: 70px;
   }
 }
 
@@ -40,7 +39,7 @@
   margin: 0 auto;
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 23px;
+    margin-bottom: 18px;
     padding: 14px 20px 0;
   }
 
@@ -58,8 +57,8 @@
   margin-top: 0;
   padding: 0 11px;
   width: 60px;
-  top: 50px;
-  left: -15px;
+  top: 47px;
+  left: -20px;
   font-size: 12px;
   line-height: 12px;
   background-color: #eaeaea;
@@ -68,8 +67,8 @@
     min-width: 125px;
     min-height: 14px;
     margin: 0 auto;
-    top: 70px;
-    left: 5%;
+    top: 85%;
+    left: 4%;
     font-size: 14px;
     line-height: 14px;
     background-color: $accent-color;
@@ -77,6 +76,6 @@
 
   @media (min-width: $desktop-width) {
     top: 63px;
-    background-color: #eaeaea;
+    background-color: $bg-base-gray-color;
   }
 }

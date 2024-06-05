@@ -6,9 +6,10 @@
   line-height: 16px;
 
   @media (min-width: $tablet-width) {
+    width: 100%;
+    box-sizing: border-box;
     font-size: 16px;
     line-height: 20px;
-    width: 100%;
   }
 }
 
@@ -27,7 +28,8 @@
 
 .info-list__decoration {
   @media (min-width: $tablet-width) {
-    margin-bottom: 7px;
+    min-height: 20px;
+    box-sizing: border-box;
     padding: 5px 0;
     border-bottom: 1px solid #cdcdcd;
   }

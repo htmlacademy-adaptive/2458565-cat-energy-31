@@ -1,21 +1,40 @@
-// .site-list {
+.site-list {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    width: 100%;
+    min-height: 198px;
+    margin: 15px auto 0;
+  }
 
-// }
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 33px;
+    align-items: center;
+    width: 440px;
+    min-height: 36px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 475px;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
 
 .site-list__item {
   @media (min-width: $mobile-width) and (max-width: 767px) {
-    min-width: 100%;
-    margin: 0;
+    width: 100%;
+    min-width: 280px;
+    margin: 0 auto;
     padding: 22px 0 24px;
     border-top: 1px solid #e6e6e6;
-    border-width: 100%;
     box-sizing: border-box;
   }
 
   &:nth-of-type(3n) {
     @media (min-width: $mobile-width) and (max-width: 767px) {
       border-bottom: 1px solid #e6e6e6;
-      border-width: 100%;
     }
   }
 }
@@ -32,6 +51,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: fit-content;
     font-size: 20px;
     line-height: 29px;
   }
@@ -58,6 +78,10 @@
   text-decoration-color: $bg-base-green-color;
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
+
+  @media (min-width: $tablet-width) {
+    text-underline-offset: 11px;
+  }
 
   @media (min-width: $desktop-width) {
     text-decoration-color: $accent-color;

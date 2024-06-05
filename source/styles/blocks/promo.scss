@@ -1,14 +1,16 @@
 .promo {
   margin: 0 auto;
-  margin-bottom: 20px;
-  min-width: 280px;
   min-height: 480px;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
     position: relative;
     min-width: 708px;
-    margin: 0 30px;
+    margin-top: 65px;
     background-color: $accent-color;
     background-image: none;
   }
@@ -18,34 +20,39 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    margin-bottom: 82px;
-    min-width: 100%;
+    width: 100%;
     min-height: 580px;
     background-color: transparent;
   }
 }
 
 .promo__background-container {
-  margin: 0 auto;
-
-  @media (max-width: $mobile-width) {
-    min-width: 320px;
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    position: relative;
+    width: 100%;
     min-height: 302px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/index-cat-background-mobile@2x.webp");
+    background-color: rgba(61, 60, 65, 0.9);
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/backgrounds/index-cat-background-mobile@2x.webp" 2x, "../../images/backgrounds/index-cat-background-mobile@1x.webp" 1x, "../../images/backgrounds/index-cat-background-mobile@2x.jpg"2x, "../../images/backgrounds/index-cat-background-mobile@1x.jpg" 1x);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100%, 320px auto;
+    background-position: center;
     object-fit: contain;
+    z-index: -1;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    position: relative;
+    min-width: 414px;
     margin-left: 90px;
+    background-color: transparent;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
-    width: 414px;
-    padding: 110px 116px 194px 100px;
+    width: 610px;
+    padding: 110px 81px 184px;
+    box-sizing: border-box;
   }
 }
 
@@ -73,7 +80,7 @@
   color: $accent-color;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 21px;
+    margin-bottom: 50px;
     font-size: 20px;
     line-height: 20px;
     text-align: left;
@@ -89,6 +96,7 @@
   display: block;
   box-sizing: border-box;
   min-width: 280px;
+  height: auto;
   margin: 0 auto;
   margin-top: -135px;
   background-color: transparent;
@@ -96,15 +104,16 @@
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     display: block;
     min-width: 709px;
-    margin-top: 4%;
-    margin-left: -40px;
+    height: auto;
+    margin-top: -12%;
+    margin-left: 0;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 552px;
+    width: 552px;
     height: auto;
-    margin-top: 4%;
-    margin-left: -23%;
+    margin-top: 5%;
+    margin-left: -27%;
   }
 }
 
@@ -115,9 +124,17 @@
   padding: 10px 0;
   min-height: 40px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
     position: absolute;
     content: "";
+    display: block;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    top: 146%;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
     margin: 0;
     box-sizing: border-box;
     width: 244px;
@@ -131,6 +148,5 @@
   @media (min-width: $desktop-width) {
     padding: 14px 26px;
     top: 342px;
-    left: 190px;
   }
 }

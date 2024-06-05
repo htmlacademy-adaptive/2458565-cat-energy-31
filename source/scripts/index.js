@@ -2,14 +2,14 @@
 const navMain = document.querySelector('.page-header__navigation');
 const navToggle = document.querySelector('.main-navigation__toggle');
 
-navMain.classList.remove('.main-nav__nojs');
+navMain.classList.remove('.main-navigation--nojs');
 
 navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('main-nav__closed')) {
-    navMain.classList.remove('main-nav__closed');
-    navMain.classList.add('main-nav__opened');
+  if (navMain.classList.contains('main-navigation--closed')) {
+    navMain.classList.remove('main-navigation--closed');
+    navMain.classList.add('main-navigation--opened');
   } else {
-    navMain.classList.add('main-nav__closed');
-    navMain.classList.remove('main-nav__opened');
+    navMain.classList.add('main-navigation--closed');
+    navMain.classList.remove('main-navigation--opened');
   }
 });

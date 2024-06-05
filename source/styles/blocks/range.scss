@@ -1,29 +1,78 @@
-// .range {
-// }
-
 .range__range-bar {
   position: absolute;
   width: 4px;
   height: 100%;
   top: 0;
-  left: 50%;
+  left: 49%;
   background-color: $mask-bg-base-gray-color;
   border-radius: 2px;
   transform: rotate(180deg);
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+    left: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 38px;
+    height: 38px;
+    top: 43%;
+    left: -16px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    outline: 2px solid $mask-bg-base-gray-color;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      top: 46%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 47%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $bg-base-green-color;
+  }
+
+  &:active {
+    background-color: $base-hover-green;
+    opacity: 0.6;
+  }
 }
 
 .range__button {
   position: absolute;
   content: "";
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 39px;
+  height: 39px;
   top: 43%;
   left: -18px;
-  border-radius: 50%;
-  border: 2px solid $mask-bg-base-gray-color;
-  background-image: url("../../icons/stack.svg#slider-arrow");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 24px 18px;
+  background-color: $mask-bg-base-gray-color;
+  mask-image: url("../../icons/stack.svg#slider-toggle");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 24px 18px;
+
+  @media (min-width: $tablet-width) {
+    top: 46%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 47%;
+  }
+}
+
+.range__range-bar:hover .range__button {
+  background-color: $bg-base-green-color;
+}
+
+.range__range-bar:hover::after {
+  outline: 1px solid $bg-base-green-color;
 }

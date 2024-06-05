@@ -2,30 +2,24 @@
   --left: 80%;
 }
 
-.slider__wrapper {
-  position: relative;
-  width: 280px;
-  height: 256px;
-
-  @media (min-width: $tablet-width) {
-    width: 560px;
-    height: 512px;
-    background: linear-gradient(to bottom, $accent-color 30%, #eaeaea 30%);
-  }
-}
-
 .slider__wrapper-before {
   position: relative;
   width: 50%;
   height: 256px;
-  top: 0;
+  top: -6px;
   left: 0;
   background-color: #eaeaea;
   overflow: hidden;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
     width: 50%;
     min-height: 512px;
+    background: linear-gradient(to bottom, $accent-color 162px, #eaeaea 162px);
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 512px;
+    background: linear-gradient(to bottom, $accent-color 137px, $bg-base-gray-color 137px);
   }
 }
 

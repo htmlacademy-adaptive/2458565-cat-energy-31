@@ -1,25 +1,29 @@
 .page-header {
   display: flex;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: space-between;
+  flex-grow: 0;
+  flex-shrink: 0;
   margin-top: 13px;
-  min-width: 280px;
-  min-height: 38px;
+  box-sizing: border-box;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
-    flex-flow: column wrap;
+    min-width: 280px;
+    min-height: 38px;
+    margin-bottom: 20px;
   }
 
-  @media (min-width: $tablet-width) {
-    min-width: 708px;
-    margin: 0 30px;
-    padding: 25px 0 65px;
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    min-width: 768px;
+    padding: 25px 0 0;
+    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     margin-top: 55px;
-    margin-bottom: 74px;
+    margin-bottom: 82px;
     padding: 0;
     width: 1220px;
     min-height: 59px;
@@ -35,10 +39,10 @@
     min-height: 694px;
     top: 0;
     right: 0;
-    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(99, 168, 56, 0.85), rgba(127, 211, 78, 0.85)), url("../../images/backgrounds/index-cat-background-desktop 1@2x.png");
+    background-image: linear-gradient(to right, rgba(99, 166, 60, 0.85), rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85), rgba(120, 177, 82, 0.85)), image-set("../../images/backgrounds/index-background-desktop@2x.webp" 2x, "../../images/backgrounds/index-background-desktop@1x.webp" 1x, "../../images/backgrounds/index-background-desktop@2x.png" 2x, "../../images/backgrounds/index-background-desktop@1x.png" 1x);
     background-repeat: no-repeat;
-    background-size: 100%, 720px 694px;
-    background-color: rgba(157, 148, 143, 0.5);
+    background-size: 100%, 1041px auto;
+    background-color: rgb(61, 60, 65);
     object-fit: contain;
     z-index: -1;
   }
@@ -50,8 +54,9 @@
   width: 190px;
   height: 38px;
 
-  @media (max-width: $mobile-width) {
-    margin-left: 20px;
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   @media (min-width: $tablet-width) {

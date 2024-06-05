@@ -1,52 +1,71 @@
 .example {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding-bottom: 40px;
+    background-color: #eaeaea;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    background: linear-gradient(to bottom, $accent-color 56%, #eaeaea 56%);
+    padding-bottom: 101px;
+  }
+}
+
+.example__container {
   min-width: 280px;
   margin: 0 auto;
-  padding: 25px 20px 40px;
-  background-color: #eaeaea;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
     min-width: 708px;
-    margin: 0 auto;
+    margin: 0 30px;
     padding: 0;
     box-sizing: border-box;
-    background-color: $accent-color;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     width: 100%;
+    min-height: 462px;
+    box-sizing: border-box;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
-    column-gap: 224px;
-    background: linear-gradient(to bottom, $accent-color 154px, #eaeaea 154px);
+    column-gap: 50px;
+    background-color: $bg-base-gray-color;
   }
 }
 
-.example__wrapper {
-  @media (min-width: $tablet-width) and (max-width: 1439px) {
-    margin: 0 30px;
+.example__info-wrapper {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 0 20px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 436px;
+    width: 440px;
     min-height: 317px;
     margin-left: 110px;
-    padding: 0 0 75px;
+    padding: 70 0 60px;
   }
 }
 
 .example__title {
   @include title-font;
   margin-top: 0;
+  width: fit-content;
   text-transform: none;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    margin: 0 20px 40px;
+    padding-top: 25px;
+  }
 
   @media (min-width: $tablet-width) {
     @include title-font-tablet;
-    margin-bottom: 60px;
+    margin: 0 30px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 146px;
+    margin-bottom: 76px;
+    max-width: 610px;
+    margin-left: 110px;
   }
 }
 
@@ -54,24 +73,32 @@
   width: 100%;
   min-height: 108px;
   margin-top: 0;
+  box-sizing: border-box;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 
   @media (min-width: $tablet-width) {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
+    margin-bottom: 21px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 16px;
-    margin-bottom: 69px;
+    margin-bottom: 57px;
+    letter-spacing: 0.14px;
   }
 }
 
 .example__stats-container {
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     margin: 0 auto;
-    margin-bottom: 99px;
+    margin-bottom: 102px;
     min-width: 708px;
     background-color: $accent-color;
   }
@@ -86,19 +113,23 @@
 .example__list {
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 .example__text-container {
-  @include title-font(14px, 20px);
-  text-align: center;
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    display: flex;
+    width: 188px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 
   @media (min-width: $tablet-width) {
-    margin-left: auto;
-    width: 174px;
-    min-height: 49px;
-    font-size: 20px;
     text-align: right;
+    padding: 10px 2px;
+    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-width) {
@@ -111,17 +142,36 @@
   }
 }
 
-.example__slider-background {
-  @media (min-width: $tablet-width) and (max-width: 1439px) {
-    box-sizing: border-box;
-    padding-bottom: 151px;
-    margin: 0;
-    min-width: 708px;
-    background: linear-gradient(to bottom, $accent-color 154px, #eaeaea 154px);
+.example__text {
+  @include title-font(14px, 20px);
+  text-align: center;
+  width: fit-content;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    width: 174px;
+    min-height: 29px;
+    font-size: 20px;
+    text-align: right;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 110px;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.example__price {
+  @include title-font(14px, 20px);
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 29px;
   }
 }
 
@@ -132,8 +182,13 @@
   height: 256px;
 
   @media (min-width: $tablet-width) {
-    width: 560px;
+    min-width: 560px;
     min-height: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 110px;
+    margin-top: -131px;
   }
 }
 
