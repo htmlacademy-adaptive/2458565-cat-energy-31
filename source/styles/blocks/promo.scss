@@ -32,7 +32,13 @@
     width: 100%;
     min-height: 302px;
     background-color: rgba(61, 60, 65, 0.9);
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/backgrounds/index-cat-background-mobile@2x.webp" 2x, "../../images/backgrounds/index-cat-background-mobile@1x.webp" 1x, "../../images/backgrounds/index-cat-background-mobile@2x.jpg"2x, "../../images/backgrounds/index-cat-background-mobile@1x.jpg" 1x);
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set(
+        url("../images/backgrounds/index-cat-background-mobile@1x.webp") type("image/webp") 1x,
+        url("../images/backgrounds/index-cat-background-mobile@2x.webp") type("image/webp") 2x,
+        url("../images/backgrounds/index-cat-background-mobile@1x.jpg") type("image/jpg") 1x,
+        url("../images/backgrounds/index-cat-background-mobile@2x.jpg") type("image/jpg") 2x);
     background-repeat: no-repeat;
     background-size: 100%, 320px auto;
     background-position: center;
