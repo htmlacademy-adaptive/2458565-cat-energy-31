@@ -38,7 +38,7 @@
   @include title-font(24px, 24px);
   margin: 0 auto;
 
-  @media (max-width: $mobile-width) {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
     margin-bottom: 18px;
     padding: 14px 20px 0;
   }

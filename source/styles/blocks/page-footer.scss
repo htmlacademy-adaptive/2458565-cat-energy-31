@@ -14,12 +14,12 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 58px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 55px 30px;
     box-sizing: border-box;
-    flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 0;
+    gap: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -67,8 +67,8 @@
 
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     margin: 0;
-    margin-right: 23%;
     padding: 0;
+    width: 236px;
   }
 
   @media (min-width: $desktop-width) {
@@ -79,6 +79,14 @@
 .page-footer__container {
   @media (min-width: $mobile-width) and (max-width: 767px) {
     width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
   }
 }
 
