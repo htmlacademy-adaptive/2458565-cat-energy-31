@@ -1,0 +1,47 @@
+.slim {
+  position: relative;
+}
+
+.slim::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 36px;
+  height: 50px;
+  top: 21px;
+  left: 27px;
+  background-image: url("../../icons/stack.svg#cat");
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 140px;
+    height: 194px;
+    top: 81px;
+    left: 475px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 97px;
+    top: 41px;
+    left: 67px;
+  }
+}
+
+.slim__title {
+  margin-left: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.slim__link::after {
+  left: 102px;
+
+  @media (min-width: $tablet-width) {
+    left: 133px;
+  }
+}

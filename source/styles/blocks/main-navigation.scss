@@ -1,0 +1,104 @@
+.main-navigation {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $accent-color;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    width: 100%;
+    min-width: 280px;
+    min-height: 211px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1220px;
+    padding: 0;
+  }
+}
+
+.main-navigation__list {
+  @include list-style;
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  top: 8px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+@media (min-width: $mobile-width) and (max-width: 767px) {
+  .main-navigation--closed .main-navigation__toggle {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../icons/stack.svg#navigation-button");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 24px 24px;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .main-navigation--closed .site-list {
+    display: none;
+  }
+
+  .main-navigation--closed {
+    min-height: 38px;
+    margin-bottom: 15px;
+  }
+
+  .main-navigation--opened .main-navigation__toggle {
+    background-image: url("../../icons/stack.svg#navigation-close-button");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .main-navigation--opened .site-list {
+    display: block;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: block;
+  }
+
+  .main-navigation--nojs .site-list__item {
+    display: block;
+  }
+}

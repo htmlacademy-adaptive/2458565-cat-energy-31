@@ -1,0 +1,130 @@
+.card {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    min-width: 320px;
+    min-height: 209px;
+    padding: 21px 20px 22px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $special-hover-gray;
+    background: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    min-height: 485px;
+    margin: 0 30px;
+    padding: 0 37px 40px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, $accent-color 10%, $bg-base-gray-color 10%);
+  }
+
+  @media (min-width: $tablet-width)  and (max-width: 1439px) {
+    min-width: 324px;
+    background-color: $bg-base-gray-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-flow: column wrap;
+    width: 245px;
+  }
+}
+
+.card__container {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 21px;
+  }
+}
+
+.card__container-image {
+  display: block;
+  width: 140px;
+  min-height: auto;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    margin: 0 auto;
+    width: 200px;
+    min-height: 210px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 196px;
+    margin-bottom: 9px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.card__container-image--accent {
+  @media (min-width: $tablet-width) {
+    margin-top: -15px;
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.card__text-content {
+  min-height: 103px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 4px;
+    min-height: 157px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+  }
+}
+
+.card__title {
+  @include title-font(16px, 20px);
+  margin-top: 0;
+  margin-bottom: 14px;
+
+
+  @media (max-width: $mobile-width) {
+    max-width: 76px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 20px;
+    width: 140px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.card__info-list {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.card__link {
+  display: block;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 6px;
+  }
+}

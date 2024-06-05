@@ -1,0 +1,22 @@
+.logo__image:hover,
+.logo__image:focus {
+  opacity: 0.8;
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__text-image {
+  width: 128px;
+  height: 24px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
