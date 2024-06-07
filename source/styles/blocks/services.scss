@@ -151,10 +151,17 @@
   @include title-font(16px, 16px);
   position: relative;
   display: inline-block;
-  min-width: 202px;
+  min-width: 104px;
+  max-width: 200px;
+  padding-right: 17px;
+  box-sizing: border-box;
+
 
   @media (min-width: $tablet-width) {
     @include title-font(20px, 29px);
+    padding-right: 24px;
+    min-width: 110px;
+    max-width: 300px;
   }
 
   &:hover,
@@ -192,6 +199,9 @@
 
   @media (min-width: $tablet-width) {
     top: 10px;
-    left: 130px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 8px;
   }
 }

@@ -39,9 +39,5 @@
 }
 
 .slim__link::after {
-  left: 102px;
-
-  @media (min-width: $tablet-width) {
-    left: 133px;
-  }
+  left: 100%;
 }

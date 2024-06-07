@@ -1,6 +1,7 @@
 .subscription__container {
   margin: 0 auto;
   box-sizing: border-box;
+  max-width: 1440px;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     min-width: 280px;
@@ -15,7 +16,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 92px 0 104px;
+    padding: 96px 0 104px;
   }
 }
 
@@ -67,6 +68,10 @@
   margin-bottom: 22px;
   text-align: center;
 
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    margin-bottom: 24px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     width: 632px;
   }
@@ -83,6 +88,7 @@
 .subscription__form {
   display: flex;
   margin: 0 auto;
+  box-sizing: border-box;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     flex-flow: column wrap;
@@ -115,7 +121,7 @@
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     width: 376px;
     min-height: 56px;
-    padding: 13px;
+    padding: 10px;
   }
 
   @media (min-width: $desktop-width) {

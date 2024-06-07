@@ -1,6 +1,7 @@
 .products {
   box-sizing: border-box;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
 .products__title {
@@ -18,7 +19,7 @@
 
   @media (min-width: $tablet-width) {
     @include title-font(32px, 32px, none);
-    margin-bottom: 78px;
+    margin-bottom: 82px;
     margin-left: 70px;
     box-shadow:
       -40px 0 0 0 $accent-color,
@@ -64,7 +65,8 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  min-width: 320px;
+  min-width: 280px;
+  margin: 0 20px;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     margin-bottom: 35px;
@@ -77,6 +79,7 @@
 
   @media (min-width: $desktop-width) {
     width: 896px;
+    margin: 0;
   }
 }
 
@@ -95,7 +98,7 @@
 
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     width: 100%;
-    padding: 26px 38px 28px;
+    padding: 27px 38px 29px;
     box-sizing: border-box;
     border-bottom: 1px solid #cdcdcd;
 
@@ -105,7 +108,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0 17px;
+    padding: 15px 0;
     border-top: 1px solid #cdcdcd;
 
     &:nth-child(4n) {
@@ -125,7 +128,13 @@
   @media (min-width: $mobile-width) and (max-width: 767px) {
     min-width: 280px;
     min-height: 290px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/backgrounds/products-background@2x.png");
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set(
+        url("../../images/backgrounds/products-background@1x.webp") type("image/webp") 1x,
+        url("../../images/backgrounds/products-background@2x.webp") type("image/webp") 2x,
+        url("../../images/backgrounds/products-background@1x.png") type("image/png") 1x,
+        url("../../images/backgrounds/products-background@2x.png") type("image/png") 2x);
   }
 
   @media (min-width: $tablet-width) and (max-width: 1439px) {
@@ -134,7 +143,13 @@
     min-width: 707px;
     min-height: 200px;
     margin: 0 30px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/backgrounds/products-background-tablet-@2x.webp" 2x, "../../images/backgrounds/products-background-tablet-@1x.webp" 1x, "../../images/backgrounds/products-background-tablet-@2x.png" 2x, "../../images/backgrounds/products-background-tablet-@1x.png" 1x);
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set(
+        url("../../images/backgrounds/products-background-tablet-@1x.webp") type("image/webp") 1x,
+        url("../../images/backgrounds/products-background-tablet-@2x.webp") type("image/webp") 2x,
+        url("../../images/backgrounds/products-background-tablet-@1x.png") type("image/png") 1x,
+        url("../../images/backgrounds/products-background-tablet-@2x.png") type("image/png") 2x);
   }
 
   @media (min-width: $desktop-width) {
@@ -142,7 +157,13 @@
     width: 245px;
     min-height: 288px;
     margin: 0;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/backgrounds/products-background@2x.webp" 2x, "../../images/backgrounds/products-background@1x.webp" 1x, "../../images/backgrounds/products-background@2x.png" 2x, "../../images/backgrounds/products-background@1x.png" 1x);
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      image-set(
+        url("../../images/backgrounds/products-background@1x.webp") type("image/webp") 1x,
+        url("../../images/backgrounds/products-background@2x.webp") type("image/webp") 2x,
+        url("../../images/backgrounds/products-background@1x.png") type("image/png") 1x,
+        url("../../images/backgrounds/products-background@2x.png") type("image/png") 2x);
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -10,7 +10,7 @@
 
   @media (min-width: $tablet-width) {
     width: 250px;
-    min-height: 485px;
+    min-height: 481px;
     padding: 0 37px 40px;
     box-sizing: border-box;
     background: linear-gradient(to bottom, $accent-color 10%, $bg-base-gray-color 10%);
@@ -50,8 +50,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 170px;
     min-height: 196px;
-    margin-bottom: 9px;
+    margin-bottom: 6px;
   }
 
   &:hover,
@@ -65,13 +66,14 @@
 }
 
 .card__container-image--accent {
-  @media (min-width: $tablet-width) {
-    margin-top: -15px;
-    margin-bottom: 21px;
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-top: -18px;
+    margin-bottom: 19px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 22px;
+    margin-top: -13px;
+    margin-bottom: 18px;
   }
 }
 
@@ -84,7 +86,6 @@
   min-height: 103px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 6px;
     min-height: 157px;
   }
 
@@ -97,6 +98,7 @@
   @include title-font(16px, 20px);
   margin-top: 0;
   margin-bottom: 14px;
+  color: #222222;
 
 
   @media (max-width: $mobile-width) and (max-width: 767px) {
@@ -104,7 +106,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0 auto 15px;
+    margin: 0 auto 21px;
     width: 140px;
     font-size: 20px;
     line-height: 24px;
@@ -112,7 +114,20 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto 17px;
+    margin: 0 auto 23px;
+  }
+}
+
+.card__title-link {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
