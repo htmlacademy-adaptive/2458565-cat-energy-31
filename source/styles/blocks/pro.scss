@@ -38,10 +38,14 @@
   }
 }
 
-.pro__link::after {
-  left: 100px;
+.pro__link {
+  min-width: 100px;
 
-  @media (min-width: $tablet-width) {
-    left: 129px;
+  @media (min-width: $desktop-width) {
+    padding-right: 31px;
   }
+}
+
+.pro__link::after {
+  left: 100%;
 }

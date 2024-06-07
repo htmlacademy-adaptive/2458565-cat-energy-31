@@ -3,15 +3,13 @@
   margin: 0 auto;
   margin-bottom: 25px;
 
-  @media (min-width: $tablet-width) and (max-width: 1439px) {
+  @media (min-width: $tablet-width) {
     margin: 0 auto;
-    margin-bottom: 72px;
+    margin-bottom: 68px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
-    margin: 0 auto;
-    margin-bottom: 68px;
   }
 }
 
@@ -27,7 +25,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: -9px 0 112px;
+    margin: -9px 0 115px;
   }
 }
 
@@ -37,29 +35,32 @@
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 85px 0;
+    gap: 91px 0;
     min-width: 708px;
-    margin: 110px auto 0;
+    margin: 114px auto 0;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 90px;
+    row-gap: 93px;
     justify-content: space-between;
     margin: 0 auto;
   }
 }
 
-.catalog__button--accent {
+.catalog__button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
   color: #444444;
   background-color: $bg-base-gray-color;
-  width: 100%;
-  cursor: pointer;
 
   &:hover,
   &:focus,
   &:active {
+    color: #444444;
     background-color: $special-hover-gray;
   }
 }

@@ -1,10 +1,15 @@
 .socials__list {
   @include list-style;
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 132px;
+  gap: 24px;
   min-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }
 
 .socials__link {

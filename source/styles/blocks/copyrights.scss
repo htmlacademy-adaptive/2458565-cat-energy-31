@@ -1,8 +1,16 @@
 .copyrights {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
   align-items: center;
   min-height: 38px;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }
 
 .copyrights__link {
@@ -29,6 +37,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 6px;
+    width: 129px;
   }
 }
 

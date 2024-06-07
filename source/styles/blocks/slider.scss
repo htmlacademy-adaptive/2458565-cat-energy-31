@@ -5,7 +5,7 @@
 .slider__wrapper-before {
   position: relative;
   width: 50%;
-  height: 256px;
+  height: 260px;
   top: -6px;
   left: 0;
   background-color: #eaeaea;
@@ -13,13 +13,13 @@
 
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     width: 50%;
-    min-height: 512px;
-    background: linear-gradient(to bottom, $accent-color 162px, #eaeaea 162px);
+    min-height: 518px;
+    background: linear-gradient(to bottom, $accent-color 160px, #eaeaea 160px);
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 512px;
-    background: linear-gradient(to bottom, $accent-color 137px, $bg-base-gray-color 137px);
+    min-height: 518px;
+    background: linear-gradient(to bottom, $accent-color 133px, $bg-base-gray-color 133px);
   }
 }
 
